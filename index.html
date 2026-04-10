@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,605;1,605&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+    
+    <h2>hi lol</h2>
+
+    <img src="images/stonemsg.png" alt="" height="120px">
+
+<img style="display: flex;" id="slideshow" width="400" height="300">
+
+<script>
+const images = [
+    "image1.jpg",
+    "image2.jpg",
+    "image3.jpg",
+    "image4.jpg",
+    "image5.jpg",
+    "image6.jpg",
+    "image7.jpg",
+    "image8.jpg",
+    "image9.jpg",
+    "image10.jpg"
+];
+
+let index = 0;
+
+const imgElement = document.getElementById("slideshow");
+
+function changeImage() {
+    imgElement.src = images[index];
+    index++;
+
+    if (index >= images.length) {
+        index = 0; // loop back to start
+    }
+}
+
+changeImage(); // show first image immediately
+setInterval(changeImage, 0700); // change every 2 seconds
+</script>
+
+</body>
+</html>
